@@ -160,11 +160,12 @@
          * { box-sizing: border-box; }
   body {
     margin: 0;
-    padding: 60px 20px;
+    padding: 60px 20px 80px;
     background: #ffffff;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
   }
 
   .card {
@@ -174,6 +175,7 @@
     border-radius: 4px;
     padding: 70px 60px;
     text-align: center;
+    margin: 0 auto;
   }
 
   h2 {
@@ -232,6 +234,100 @@
     .grid { grid-template-columns: repeat(2, 1fr); }
     .card { padding: 50px 25px; }
   }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+
+  .section {
+    display: flex;
+    flex-direction: column;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .features {
+    background: #14141f;
+    padding: 80px 100px;
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+    flex-wrap: wrap;
+  }
+
+  .features .feature {
+    flex: 1;
+    min-width: 240px;
+    max-width: 360px;
+  }
+
+  .feature-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+  }
+
+  .feature-icon svg {
+    width: 28px;
+    height: 28px;
+    fill: none;
+    stroke: #ffffff;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .icon-moon    { background: linear-gradient(135deg, #4b4fd1, #3a3fc4); }
+  .icon-user    { background: #34c98e; }
+  .icon-sliders { background: #e85fa0; }
+
+  .features .feature h3 {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+
+  .features .feature p {
+    color: #9a9ab0;
+    font-size: 19px;
+    line-height: 1.5;
+    font-weight: 400;
+  }
+
+  .cta {
+    background: #6266d1;
+    padding: 140px 40px;
+    text-align: center;
+  }
+
+  .cta h2 {
+    color: #ffffff;
+    font-size: 56px;
+    font-weight: 800;
+    margin-bottom: 24px;
+    letter-spacing: -0.5px;
+  }
+
+  .cta p {
+    color: #d6d7f5;
+    font-size: 22px;
+    font-weight: 400;
+  }
+
+  @media (max-width: 900px) {
+    .features { flex-direction: column; padding: 60px 40px; }
+    .cta { padding: 90px 30px; }
+    .cta h2 { font-size: 36px; }
+    .cta p { font-size: 18px; }
+  }
+
     </style>
 </head>
 <body>
@@ -355,6 +451,42 @@
       <span>HTML5 Valid</span>
     </div>
   </div>
+</div>
+
+
+<div class="section">
+
+  <div class="features">
+    <div class="feature">
+      <div class="feature-icon icon-moon">
+        <svg viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </div>
+      <h3>x2 Modules</h3>
+      <p>Each module can easily be turned into a dark version by adding .dark as class.</p>
+    </div>
+
+    <div class="feature">
+      <div class="feature-icon icon-user">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
+      </div>
+      <h3>Onboarding Screens</h3>
+      <p>Additional pages to log in, sign up as well as forgot password are included.</p>
+    </div>
+
+    <div class="feature">
+      <div class="feature-icon icon-sliders">
+        <svg viewBox="0 0 24 24"><line x1="4" y1="6" x2="20" y2="6"/><circle cx="9" cy="6" r="2" fill="#fff" stroke="none"/><line x1="4" y1="12" x2="20" y2="12"/><circle cx="15" cy="12" r="2" fill="#fff" stroke="none"/><line x1="4" y1="18" x2="20" y2="18"/><circle cx="11" cy="18" r="2" fill="#fff" stroke="none"/></svg>
+      </div>
+      <h3>Unlimited Possibilities</h3>
+      <p>With a custom framework and global classes, build consistent pages with ease.</p>
+    </div>
+  </div>
+
+  <div class="cta">
+    <h2>And... fast. Really fast.</h2>
+    <p>The main focus of this template is performance, no bloat.</p>
+  </div>
+
 </div>
 
 </body>
